@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class TextFunction : MonoBehaviour
 {
-    public bool keyDown;
+    /*public bool keyDown;
     [SerializeField]
     public int index;
     [SerializeField]
     public int maxIndex = 2;
-    public Button[] button;
+    public Button[] button;*/
     void Start()
     {
 
