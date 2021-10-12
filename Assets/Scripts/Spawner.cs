@@ -35,9 +35,9 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < clock; i++)
         {
-            spawner.transform.position = new Vector3(Random.Range(15, -15), 5, 0);
+            spawner.transform.position = new Vector3(Random.Range(7, -7), 7, 0);
             yield return new WaitForSeconds(1);
-            spawner.transform.position = new Vector3(Random.Range(15, -15), 5, 0);
+            spawner.transform.position = new Vector3(Random.Range(7, -7), 7, 0);
         }
     }
 }
