@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TextFunction : MonoBehaviour
 {
-
-    public Text[] text;
+    
+    public Button[] button;
     void Start()
     {
         
@@ -16,6 +16,7 @@ public class TextFunction : MonoBehaviour
     void Update()
     {
         //var vertical = Input.GetAxis("Vertical");
+        
 
     }
 }
