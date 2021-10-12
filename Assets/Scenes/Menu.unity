@@ -475,6 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81715899228f00740a971a01b275a983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyDown: 0
   button: []
 --- !u!4 &673537128
 Transform:
