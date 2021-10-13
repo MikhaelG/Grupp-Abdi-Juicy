@@ -21,6 +21,7 @@ public class TextFunction : MonoBehaviour
         {
             if (!keyDown)
             {
+                //Hoppar direkt till nummer 2 på index
                 if (Input.GetAxis("Vertical") < 0)
                 {
                     if (index < maxIndex)
@@ -50,13 +51,13 @@ public class TextFunction : MonoBehaviour
 
                 }
                 //Om vertical är 0, då ska keydown vara falsk
-                else
-                {
-                    keyDown = false;
-                }
+                
 
             }
-
+            else
+            {
+                keyDown = false;
+            }
 
         }
 
