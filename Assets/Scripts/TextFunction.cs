@@ -64,6 +64,11 @@ public class TextFunction : MonoBehaviour
         {
             print("down");
         }
+
+        /*if (Input.GetKeyDown(KeyCode.Space))
+        {
+            button.onClick click;
+        }*/
     }
 
 }
