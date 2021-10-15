@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TextFunction : MonoBehaviour
 {
+    //Sagas kod
     public bool keyDown;
     [SerializeField]
     public int index;
