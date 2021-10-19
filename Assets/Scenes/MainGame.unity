@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 55759481}
   - component: {fileID: 55759485}
   - component: {fileID: 55759486}
+  - component: {fileID: 55759487}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -238,7 +239,7 @@ Transform:
   m_GameObject: {fileID: 55759480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 1.0393974, y: 1.0393974, z: 0}
+  m_LocalScale: {x: 1.04, y: 1.04, z: 0}
   m_Children:
   - {fileID: 295125498}
   m_Father: {fileID: 0}
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8622a73f9cdf7419a1a93fcee4f901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnim: {fileID: 55759487}
   firePoint: {fileID: 295125498}
   bulletPrefab: {fileID: 897971559530645810, guid: c77c32063e0671b41801835f17d0a7c0,
     type: 3}
@@ -285,6 +287,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &55759487
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55759480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 154ab3c6eeb15414ebda288a0869c3da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &201902759
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295125497}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.22, z: 0}
+  m_LocalPosition: {x: -0, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 55759484}
