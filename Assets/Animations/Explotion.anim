@@ -20,27 +20,27 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 6d805429b6265664cb3850b6e9c8feb7, type: 3}
+      value: {fileID: 21300000, guid: a4894bae77ad62d4190b897e4e1b6a39, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: 4209f7e049c6b3a4c9ed917b57580363, type: 3}
+      value: {fileID: 21300000, guid: bd37763e643258c49bd9a4eba9d71931, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: c62f70f203d1b5d4e9cffdcb6938056e, type: 3}
+      value: {fileID: 21300000, guid: a27fad4606b602546a3bf306a6acdb67, type: 3}
     - time: 0.5
-      value: {fileID: 21300000, guid: ce0da64fc92bfdb49a241b805b313e3d, type: 3}
+      value: {fileID: 21300000, guid: dedf3ffcfb72a9f449d24d4f84fde331, type: 3}
     - time: 0.6666667
-      value: {fileID: 21300000, guid: d1aea1ac70e8bf9418ac3f2f965e5810, type: 3}
+      value: {fileID: 21300000, guid: 24e1ed93c150f4b47ac9dedda87fa60e, type: 3}
     - time: 0.8333333
-      value: {fileID: 21300000, guid: 077b4a9e2b01f65428a10c83fb237b00, type: 3}
+      value: {fileID: 21300000, guid: 6f592a9091b4d5748b1178610ceb6261, type: 3}
     - time: 1
-      value: {fileID: 21300000, guid: 5e09c0884ea5535468c3292338a5bc08, type: 3}
+      value: {fileID: 21300000, guid: dabb7c5fc6a43464cb0df062d255a8ff, type: 3}
     - time: 1.1666666
-      value: {fileID: 21300000, guid: c96724925e0271649bc920fbb1b686aa, type: 3}
+      value: {fileID: 21300000, guid: 913d555d044fb2c4e8b05aa71124df0b, type: 3}
     - time: 1.3333334
-      value: {fileID: 21300000, guid: e86656cd4afc6e34ea4dfedd1e01636f, type: 3}
+      value: {fileID: 21300000, guid: b3cfd64d89f9d68489fd7c5de2880fe2, type: 3}
     - time: 1.5
-      value: {fileID: 21300000, guid: 27bf9d4786df34b4eaab0f441416c0f9, type: 3}
+      value: {fileID: 21300000, guid: 07eb422ff14417148ab78d69149b053b, type: 3}
     - time: 1.6666666
-      value: {fileID: 21300000, guid: 17cfa5000ff3eb8479fc479e4bf843b3, type: 3}
+      value: {fileID: 21300000, guid: ba797f64ef09c7846a72e7bbfefbc944, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
