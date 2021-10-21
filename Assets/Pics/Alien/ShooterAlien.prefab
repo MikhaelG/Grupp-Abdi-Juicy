@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2852753502176533476}
   - component: {fileID: 2852753502176533403}
   - component: {fileID: 2852753502176533402}
+  - component: {fileID: -8102718664147468344}
   m_Layer: 0
   m_Name: ShooterAlien
   m_TagString: Untagged
@@ -131,3 +132,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &-8102718664147468344
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852753502176533401}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
