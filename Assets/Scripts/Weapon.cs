@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public Transform firePoint1;
+    public Transform firePoint2;
     public Animator playerAnim; //Saga
     public Transform firePoint;
     public GameObject bulletPrefab;
-    
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -19,13 +19,14 @@ public class Weapon : MonoBehaviour
             playerAnim.SetBool("Shoot", false);
             print("Stop shooting");
         }
+
     }
 
-    void Shoot ()
+    void Shoot()
     {
+        Instantiate(bulletPrefab, firePoint1.position, firePoint1.rotation);
+        Instantiate(bulletPrefab, firePoint2.position, firePoint2.rotation);
         //Gör så att skjut animationen är på när den skjuter objektet -Saga
         playerAnim.SetBool("Shoot", true);
-        
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

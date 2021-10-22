@@ -144,6 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7a5c092d06fa2488bb66993a127640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/Bullet.prefab
+  speed: 60
+=======
   speed: 40
+>>>>>>> 9c92ec55cde0fd183d2c2cfd1a7f1f5d511b75b1:Assets/Pics/Bullet/Bullet.prefab
   damage: 1
   rb: {fileID: 6327006477629686861}
