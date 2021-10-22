@@ -24,6 +24,9 @@ public class Animations : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             comet.SetActive(true);
+        }else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            comet.SetActive(false);
         }
     }
 }

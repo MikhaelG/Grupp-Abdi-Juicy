@@ -10,12 +10,12 @@ public class AlienAnim : Animations
 
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Delete))
         {
             alienAnim.SetBool("Explotion", true);
 
         }
-        else if (Input.GetKeyUp(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.Delete))
         {
             alienAnim.SetBool("Explotion", false);
         }else if (Input.GetKeyUp(KeyCode.S))
@@ -24,9 +24,12 @@ public class AlienAnim : Animations
             alienAnim.SetBool("Shoot", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             alien.SetActive(true);
+        }else if (Input.GetKeyDown(KeyCode.K))
+        {
+            alien.SetActive(false);
         }
     }
 }
