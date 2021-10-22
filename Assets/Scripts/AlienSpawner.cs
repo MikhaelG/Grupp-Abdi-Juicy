@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class AlienSpawner : MonoBehaviour
 {
     public Rigidbody2D alien;
     public Transform spawner;
@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator Timer()
@@ -25,8 +25,8 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < clock; i++)
         {
             Instantiate(alien, spawner.position, spawner.rotation);
-            yield return new WaitForSeconds(1);
-            
+            yield return new WaitForSeconds(2);
+
         }
     }
 
@@ -35,9 +35,9 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < clock; i++)
         {
-            spawner.transform.position = new Vector3(Random.Range(7, -7), 7, 0);
+            spawner.transform.position = new Vector3(Random.Range(7, -7), 5, 0);
             yield return new WaitForSeconds(1);
-            spawner.transform.position = new Vector3(Random.Range(7, -7), 7, 0);
+            
         }
     }
 }

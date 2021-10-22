@@ -353,8 +353,8 @@ GameObject:
   - component: {fileID: 1454921703}
   - component: {fileID: 1454921702}
   - component: {fileID: 1454921701}
-  - component: {fileID: 1454921700}
   - component: {fileID: 1454921699}
+  - component: {fileID: 1454921700}
   m_Layer: 0
   m_Name: ShooterSpawner
   m_TagString: Untagged
@@ -392,10 +392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1454921698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7ecdcde0f789c4888c90a07b1dfa35, type: 3}
+  m_Script: {fileID: 11500000, guid: 2eb96348d14ea6649be0890326598872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alien: {fileID: 2852753502176533403, guid: 85a6b5731412f7f4e84365909b2fe721, type: 3}
+  alien: {fileID: 1727431101465046181, guid: 5b2ac6b39adfd994c9f38864ddbcb2f4, type: 3}
   spawner: {fileID: 1454921703}
 --- !u!23 &1454921701
 MeshRenderer:
