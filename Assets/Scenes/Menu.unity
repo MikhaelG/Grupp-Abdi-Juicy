@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 1559522182}
-  disableOnce: 1
+  disableOnce: 0
 --- !u!114 &262567192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 1559522182}
-  disableOnce: 1
+  disableOnce: 0
 --- !u!114 &1352340691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuController: {fileID: 1559522182}
-  disableOnce: 1
+  disableOnce: 0
 --- !u!114 &1457043017
 MonoBehaviour:
   m_ObjectHideFlags: 0
