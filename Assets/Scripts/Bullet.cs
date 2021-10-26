@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Mikhaels kod
 public class Bullet : MonoBehaviour
 {
-    public float speed = 40f;
+    public float speed = 40f; //hastighet och damage för bullet
     public int damage = 1;
     public Rigidbody2D rb;
     
     void Start()
     {
         rb.velocity = transform.right * speed;
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 2);                  //Ta sönder bullet om 2 sekunder
     }
 
     private void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        Enemy enemy = hitInfo.GetComponent<Enemy>();   //bullet kollar efter om den träffade enemy; gör damage
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
