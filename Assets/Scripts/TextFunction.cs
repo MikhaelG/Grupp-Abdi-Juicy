@@ -12,6 +12,7 @@ public class TextFunction : MonoBehaviour
     [SerializeField]
     public int maxIndex = 2;
     public Button button;
+    //public AudioSource menuAudio;
     
     void Update()
     {
@@ -23,7 +24,7 @@ public class TextFunction : MonoBehaviour
             if (!keyDown)
             {
                 //Hoppar direkt till nummer 2 på index
-                if (Input.GetAxis("Vertical") < 0)
+                if (Input.GetAxis("Vertical") < 0) 
                 {
                     if (index < maxIndex)
                     {
@@ -34,7 +35,7 @@ public class TextFunction : MonoBehaviour
                         index = 0;
                     }
 
-                    keyDown = true;
+                    
 
                 }
                 else if (Input.GetAxis("Vertical") > 0)
@@ -49,13 +50,12 @@ public class TextFunction : MonoBehaviour
                         maxIndex = index;
                     }
 
-
+                    keyDown = true;
                 }
                 //Om vertical är 0, då ska keydown vara falsk
                 
 
-            }
-            else
+            }else
             {
                 keyDown = false;
             }
