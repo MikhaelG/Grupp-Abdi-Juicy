@@ -12,8 +12,13 @@ public class TextFunction : MonoBehaviour
     [SerializeField]
     public int maxIndex = 2;
     public Button button;
-    //public AudioSource menuAudio;
-    
+    public AudioSource menuAudio;
+
+    void Start()
+    {
+        menuAudio.GetComponent<AudioSource>(); //Fixa soundeffects
+    }
+
     void Update()
     {
         print(index);
@@ -66,11 +71,6 @@ public class TextFunction : MonoBehaviour
         {
             print("down");
         }
-
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            button.onClick click;
-        }*/
     }
 
 }
