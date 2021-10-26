@@ -55,12 +55,37 @@ PrefabInstance:
     - target: {fileID: 2852753502176533401, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}
       propertyPath: m_Name
-      value: ShooterAlien Variant
+      value: ShooterAlien Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852753502176533476, guid: 85a6b5731412f7f4e84365909b2fe721,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852753502176533476, guid: 85a6b5731412f7f4e84365909b2fe721,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852753502176533476, guid: 85a6b5731412f7f4e84365909b2fe721,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}
@@ -75,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6909108
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2852753502176533477, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}

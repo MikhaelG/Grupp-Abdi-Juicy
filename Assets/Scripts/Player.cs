@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     public int health = 1;
 
-    public GameObject deathEffect;
+    
+    public Animator death;
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -20,7 +21,8 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        death.SetBool("Explotion", true);
+        print("Död");
     }
 }
