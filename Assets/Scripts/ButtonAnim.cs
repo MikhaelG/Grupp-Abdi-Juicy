@@ -11,7 +11,8 @@ public class ButtonAnim : MonoBehaviour
     {
         if (!disableOnce) 
         {
-            menuController.menuAudio.PlayOneShot(audioClip);
+            //menuController.menuAudio.PlayOneShot(audioClip);
+
         }else
         {
             disableOnce = false;

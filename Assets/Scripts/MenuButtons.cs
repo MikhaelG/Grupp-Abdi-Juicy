@@ -16,20 +16,17 @@ public class MenuButtons : MonoBehaviour
         if(textFunction.index == thisIndex) //Om indexen är just 
         {
             animator.SetBool("Maybe", true);
-            /*if(Input.GetAxis ("Submit") == 1) //
+            if(Input.GetButtonDown("Submit")) //
             {
                 animator.SetBool("Selected", true);
+                animator.SetBool("Maybe", false);
 
-            }*/
-            
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                animator.SetBool("Selected", true);
-            }else if(animator.GetBool("Selected"))
+            }else
             {
                 animator.SetBool("Selected", false);
-                buttonAnimator.disableOnce = true;
+                animator.SetBool("Maybe", true);
             }
+            
         }
         else
         {
