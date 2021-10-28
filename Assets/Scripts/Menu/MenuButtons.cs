@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -24,13 +25,23 @@ public class MenuButtons : MonoBehaviour
                 animator.SetBool("Selected", true);
                 animator.SetBool("Maybe", false);
 
-                if(gameObject.tag == "Options")//Om objektet man selectar heter options ska den sätta på optionsmenyn
+                if (gameObject.tag == "Start")
+                {
+                    SceneManager.LoadScene(1);
+
+                }else if (gameObject.tag == "Options")//Om objektet man selectar heter options ska den sätta på optionsmenyn
                 {
                     optionsMenu.SetActive(true);
+                    textFunction.StopIndex();
                     opFunction.Options(); //Titta i OpFunction koden
+
+                }else if (gameObject.tag == "Options")
+                {
+                    Quit();
                 }
 
-            }else
+            }
+            else
             {
                 animator.SetBool("Selected", false);
                 animator.SetBool("Maybe", true);
@@ -42,10 +53,9 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
-    /*void Options()
+    public virtual void Quit()
     {
-        print("Active"); //For now
-        
+        //Skriv kod för att stänga av 
+    }
 
-    }*/
 }

@@ -10,9 +10,11 @@ public class OpFunction : MonoBehaviour
     public int opIndex;
     public int maxOpIndex;
     //Horisontellt
-    public int indexHo;
-    public int maxIndexHo;
-    
+    public float indexHo; //gjorde den till float så att man kan urskilja vertikal index (opIndex) med horisontell index 
+    public float maxIndexHo;
+
+    public GameObject optionMenu;
+
     public virtual void Options()
     {
         float vert = Input.GetAxisRaw("Vertical");
@@ -43,29 +45,42 @@ public class OpFunction : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("Horizontal"))
+        else if (Input.GetButtonDown("Submit")) //Om man tryckt ner den då kan man välja mellan att använda WASD eller arrows
         {
-            if (vert > 0.95f)
+            //Om det är gametagen Controls. (Man vill kunna välja vilka typer av knappar när man är på inställningen controls)
+            if(gameObject.tag == "Controls")
             {
-                indexHo--;
-
-
-                if (indexHo > maxIndexHo)
+                print("Controls");
+                if (vert > 0.95f)
                 {
-                    indexHo = 0;
+                    indexHo--;
+
+
+                    if (indexHo > maxIndexHo)
+                    {
+                        indexHo = 0.1f; //För att urskilja de två
+                    }
                 }
+
+
+                if (vert < -0.95f)
+                {
+                    indexHo++;
+
+                    if (indexHo < 0)
+                    {
+                        indexHo = maxIndexHo;
+                    }
+                }
+
+                //Ett sätt att välja mellan de två olika keyboard typerna
+
+            }else if(gameObject.tag == "Back")
+            {
+                optionMenu.SetActive(false);
             }
 
-
-            if (vert < -0.95f)
-            {
-                indexHo++;
-
-                if (indexHo < 0)
-                {
-                    indexHo = maxIndexHo;
-                }
-            }
+           
         }
     }
 }

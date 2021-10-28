@@ -7,6 +7,7 @@ TagManager:
   - Start
   - Options
   - Quit
+  - Controls
   layers:
   - Default
   - TransparentFX
