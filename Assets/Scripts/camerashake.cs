@@ -14,19 +14,23 @@ public class camerashake : MonoBehaviour
     new Vector3 shakePos;
     new bool shouldShake;
 
+    public Animator bomb;
+
     float shakeTime;
     
     void Update()
     {
-        time += Time.time * frequency;
-        shakePos.x = Mathf.Sin(time.x);
-
-        shakePos = transform.localPosition;
-        /*if(shakeTime > 0)
+        if(bomb.GetBool("Bomb") == true)
         {
-           
-        }*/
+            time += Time.time * frequency;
+            shakePos.x = Mathf.Sin(time.x);
 
+            shakePos = transform.localPosition;
+            /*if(shakeTime > 0)
+            {
+
+            }*/
+        }
 
     }
 }
