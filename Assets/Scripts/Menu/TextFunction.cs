@@ -11,22 +11,33 @@ public class TextFunction : MonoBehaviour
     public int index;
     [SerializeField]
     public int maxIndex = 2;
-    public Button button;
+
+    public AudioSource buttonAudio;
+    public AudioClip audioClip;
+    
     public AudioSource menuAudio;
+    public AudioClip menuAuClip;
 
     void Start()
     {
-        menuAudio.GetComponent<AudioSource>(); //Fixa soundeffects
+        buttonAudio.GetComponent<AudioSource>();
+        menuAudio.GetComponent<AudioSource>(); 
+        
     }
 
     void Update()
     {
+        menuAudio.playOnAwake = audioClip;
+
         float vert = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Vertical"))
         {
             if (vert > 0.95f)
             {
                 index--;
+
+                buttonAudio.PlayOneShot(audioClip);
+
                 if (index > maxIndex)
                 {
                     index = 0;
@@ -37,6 +48,7 @@ public class TextFunction : MonoBehaviour
             if (vert < -0.95f)
             {
                 index++;
+                buttonAudio.PlayOneShot(audioClip);
                 if (index < 0)
                 {
                     index = maxIndex;
