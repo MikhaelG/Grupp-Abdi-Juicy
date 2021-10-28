@@ -15,9 +15,19 @@ public class PowerUp : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
-        Instantiate(pickupEffect, transform.position, transform.rotation); //Animation för pickup
+        //Instantiate(pickupEffect, transform.position, transform.rotation); //Animation för pickup
 
+        GameObject firepoint = new GameObject();
+        firepoint.transform.parent = player.transform;
+        firepoint.transform.localPosition = new Vector3(0.6f,0,0);
+        firepoint.name = "Ny firepoint";
+        firepoint.transform.rotation = Quaternion.Euler (new Vector3(0, 0, 90));
 
+        GameObject firepoint2 = new GameObject();
+        firepoint2.transform.parent = player.transform;
+        firepoint2.transform.localPosition = new Vector3(-0.6f, 0, 0);
+        firepoint2.name = "Ny firepoint";
+        firepoint2.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
 
         Destroy(gameObject);
     }
