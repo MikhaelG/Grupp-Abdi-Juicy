@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class camerashake : MonoBehaviour
 {
-    //-Saga /Tobias
+    //-Saga 
     public Vector2 amplitude;
     //Variabel för hur kraftigt den ska skaka
     public Vector2 frequency;
@@ -12,29 +12,25 @@ public class camerashake : MonoBehaviour
     public Vector2 time;
     //Hur lång tid skakningen tar 
     new Vector3 shakePos;
+    new bool shouldShake;
+
+    public Animator bomb;
 
     float shakeTime;
     
-    void Start()
-    {
-        
-    }
-
-    public void Explotion()
-    {
-        shakePos.x = Mathf.Sin(time.x);
-        //Skaka mer+ ( *amlitude.x ) gör samma sak för y
-
-    }//else shakePos = Vector3.zero gör så att den kommer tillbaka till dens orginala pos
-
     void Update()
     {
-        shakePos = transform.localPosition;
-        if(shakeTime > 0)
+        if(bomb.GetBool("Bomb") == true)
         {
-           
-        }
+            time += Time.time * frequency;
+            shakePos.x = Mathf.Sin(time.x);
 
+            shakePos = transform.localPosition;
+            /*if(shakeTime > 0)
+            {
+
+            }*/
+        }
 
     }
 }

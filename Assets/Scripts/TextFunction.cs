@@ -12,11 +12,15 @@ public class TextFunction : MonoBehaviour
     [SerializeField]
     public int maxIndex = 2;
     public Button button;
-    //public AudioSource menuAudio;
-    
+    public AudioSource menuAudio;
+
+    void Start()
+    {
+        menuAudio.GetComponent<AudioSource>(); //Fixa soundeffects
+    }
+
     void Update()
     {
-        print(index);
         //Om vertikal inte är 0,om knappen är nedtryckt (om boolen är sann), om vertical är större än 0, om index är mindre än maxindex
         //Då ska de ta o plusa på index. Annars ska den sättas till 0 - Saga
         if (Input.GetAxis("Vertical") != 0)
@@ -62,15 +66,6 @@ public class TextFunction : MonoBehaviour
 
         }
 
-        if(keyDown == true)
-        {
-            print("down");
-        }
-
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            button.onClick click;
-        }*/
     }
 
 }
