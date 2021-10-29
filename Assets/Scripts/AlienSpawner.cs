@@ -35,7 +35,7 @@ public class AlienSpawner : MonoBehaviour
 
         for (int i = 0; i < clock; i++)
         {
-            spawner.transform.position = new Vector3(Random.Range(7, -7), 5, 0);
+            spawner.transform.position = new Vector3(Random.Range(20, -20), 12, 0);
             yield return new WaitForSeconds(1);
             
         }
