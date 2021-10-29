@@ -26,7 +26,7 @@ public class AlienWeapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        SoundManagerScript.PlaySound("shoot");   //spela skjuta ljud - Mikhael
+        SoundManagerScript.PlaySound("enemy");   //spela skjuta ljud - Mikhael
         //Gör så att skjut animationen är på när den skjuter objektet -Saga
         //playerAnim.SetBool("Shoot", true);
     }

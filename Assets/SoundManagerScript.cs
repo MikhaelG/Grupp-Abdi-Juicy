@@ -24,7 +24,7 @@ public class SoundManagerScript : MonoBehaviour
                 break;
 
             case "enemy":
-                audioSrc.PlayOneShot(shootSound); //spela ljudet en gång när enemy skjuter - Mikhael
+                audioSrc.PlayOneShot(enemyShoot); //spela ljudet en gång när enemy skjuter - Mikhael
                 break;
         }
     }
