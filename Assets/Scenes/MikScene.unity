@@ -539,7 +539,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a4894bae77ad62d4190b897e4e1b6a39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 725313c111cbaaf4db426c85077ce2a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -577,8 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8622a73f9cdf7419a1a93fcee4f901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint1: {fileID: 1101794666}
-  firePoint2: {fileID: 0}
   playerAnim: {fileID: 0}
   firePoint: {fileID: 1101794666}
   bulletPrefab: {fileID: 3797410010908061309, guid: 9eaf79134db457341b9f76b3e1f24426,

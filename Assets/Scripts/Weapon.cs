@@ -4,8 +4,6 @@ using UnityEngine;
 //Mikhaels kod
 public class Weapon : MonoBehaviour
 {
-    public Transform firePoint1; //första empty som är i unity
-    public Transform firePoint2; // andra empty som är i unity
     public Animator playerAnim; //Saga
     public Transform firePoint;
     public GameObject bulletPrefab;
