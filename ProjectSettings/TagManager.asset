@@ -8,6 +8,7 @@ TagManager:
   - Options
   - Quit
   - Controls
+  - Back
   layers:
   - Default
   - TransparentFX
