@@ -11,7 +11,7 @@ public class AlienBullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.up * speed;
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 5);
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)

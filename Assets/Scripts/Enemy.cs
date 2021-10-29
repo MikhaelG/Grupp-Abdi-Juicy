@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 1; //enemy har 1hp
+    public int damage = 1;
 
     public GameObject deathEffect;
     public void TakeDamage (int damage)
@@ -22,6 +23,16 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity); //Death effect spelas när enemy dör
         
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Player player = hitInfo.GetComponent<Player>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }

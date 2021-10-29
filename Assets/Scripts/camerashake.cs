@@ -12,7 +12,6 @@ public class camerashake : MonoBehaviour
     public Vector2 time;
     //Hur lång tid skakningen tar 
     new Vector3 shakePos;
-    new bool shouldShake;
 
     public Animator bomb;
 
@@ -22,14 +21,11 @@ public class camerashake : MonoBehaviour
     {
         if(bomb.GetBool("Bomb") == true)
         {
-            time += Time.time * frequency;
-            shakePos.x = Mathf.Sin(time.x);
-
             shakePos = transform.localPosition;
-            /*if(shakeTime > 0)
-            {
+            time += Time.time * frequency;
+            shakePos.x = Mathf.Sin(time.x)* amplitude.x;
 
-            }*/
+            transform.localPosition = shakePos;
         }
 
     }
