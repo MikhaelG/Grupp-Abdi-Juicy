@@ -33,7 +33,7 @@ public class MenuButtons : MonoBehaviour
                 {
                     optionsMenu.SetActive(true);
                     textFunction.StopIndex();
-                    opFunction.Options(); //Titta i OpFunction koden
+                    opFunction.active = true; //Titta i OpFunction koden
 
                 }else if (gameObject.tag == "Options")
                 {

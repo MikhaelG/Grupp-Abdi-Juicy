@@ -31,13 +31,12 @@ public class TextFunction : MonoBehaviour
     {
         menuAudio.playOnAwake = audioClip;
 
-        atStopIndex = index;
-
-        options = false;
+        
 
         float vert = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Vertical") && options == false)
         {
+            
             if (vert > 0.95f)
             {
                 index--;
@@ -60,13 +59,16 @@ public class TextFunction : MonoBehaviour
                     index = maxIndex;
                 }
             }
+            atStopIndex = index;
         }
 
     }
 
-    public virtual void StopIndex()
+    public void StopIndex()
     {
+       
         options = true;
+        print(options);
         index = atStopIndex; //Hur stoppar jag indexen?
     }
 

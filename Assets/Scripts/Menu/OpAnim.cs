@@ -9,6 +9,11 @@ public class OpAnim : MonoBehaviour
     public Animator opAnimator;
     public OpFunction opFunction;
     public float thisIndex; //Så att man kan välja mellan horisontell eller vertikal index (Titta OpFunction koden)
+
+    private void Start()
+    {
+        opAnimator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (opFunction.opIndex == thisIndex) //Om indexen är just på den "Knappen" ska den göra det här
@@ -17,15 +22,19 @@ public class OpAnim : MonoBehaviour
 
             if (Input.GetButtonDown("Submit")) //Gör så att man kan trycka på kanppen
             {
-                opAnimator.SetBool("Maybe", false);
-                opAnimator.SetBool("Selected", false);
+                if(gameObject.tag == "Controls" || gameObject.tag == "Back") //Ska bara för Controls och Back 
+                {
+                    opAnimator.SetBool("Maybe", false);
+                    opAnimator.SetBool("Selected", false);
+                }else
+                {
+                    opAnimator.SetBool("Selected", false);
+                    opAnimator.SetBool("Maybe", true);
+                }
+
 
             }
-            else
-            {
-                opAnimator.SetBool("Selected", false);
-                opAnimator.SetBool("Maybe", true);
-            }
+            
         }else
         {
             opAnimator.SetBool("Maybe", false);
