@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health = 1;
-
-    
+    public GameObject player;
     public Animator death;
     public void TakeDamage(int damage)
     {
@@ -19,10 +18,10 @@ public class Player : MonoBehaviour
 
     }
 
-    void Die()
+    public void Die()
     {
-        Destroy(gameObject);
-        death.SetBool("Explotion", true);
+        //death.SetBool("Explotion", true);
         print("Död");
+        Destroy(player.gameObject);
     }
 }

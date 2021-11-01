@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 490240131}
   - component: {fileID: 490240130}
   - component: {fileID: 490240133}
+  - component: {fileID: 490240134}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -497,6 +498,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUp: {fileID: 1064660792}
+--- !u!114 &490240134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490240129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaf78f43fb264b4596bd89b9e9d7727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 740224068}
+--- !u!82 &740224068 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 963192108084379224, guid: e9a0ee6dcff6902479bbee0877295141,
+    type: 3}
+  m_PrefabInstance: {fileID: 1082442366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828698757
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +529,7 @@ GameObject:
   - component: {fileID: 828698761}
   - component: {fileID: 828698760}
   - component: {fileID: 828698759}
+  - component: {fileID: 828698758}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -516,6 +537,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &828698758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828698757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e70f776bb49234b811842319eaaffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1125913447}
+  damage: 1
 --- !u!61 &828698759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -526,7 +561,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -778,6 +813,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 963192108084379224, guid: e9a0ee6dcff6902479bbee0877295141,
         type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963192108084379224, guid: e9a0ee6dcff6902479bbee0877295141,
+        type: 3}
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
@@ -785,7 +825,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 52d81edbd6499be43bc590e5b25e7b7a, type: 3}
     - target: {fileID: 963192108084379225, guid: e9a0ee6dcff6902479bbee0877295141,
         type: 3}
       propertyPath: m_Name
@@ -867,6 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  player: {fileID: 1125913446}
   death: {fileID: 0}
 --- !u!1 &1154593917
 GameObject:
