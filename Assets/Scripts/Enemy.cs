@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
   
     void Die ()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity); //Death effect spelas när enemy dör
+        //Instantiate(deathEffect, transform.position, Quaternion.identity); //Death effect spelas när enemy dör
         
         Destroy(gameObject);
     }
@@ -34,5 +34,10 @@ public class Enemy : MonoBehaviour
             player.TakeDamage(damage);
         }
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 }
