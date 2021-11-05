@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
         audioSource.GetComponent<AudioSource>();
     }
 
-    void SliderOp()
+    public void SliderOp()
     {
         print("Music");
     }

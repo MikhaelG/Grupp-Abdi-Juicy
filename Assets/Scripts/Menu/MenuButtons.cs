@@ -35,9 +35,10 @@ public class MenuButtons : MonoBehaviour
                     textFunction.StopIndex();
                     opFunction.active = true; //Titta i OpFunction koden
 
-                }else if (gameObject.tag == "Options")
+                }else if (gameObject.tag == "Quit")
                 {
                     Quit();
+
                 }
 
             }

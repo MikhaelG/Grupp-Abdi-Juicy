@@ -21,6 +21,7 @@ public class camerashake : MonoBehaviour
     {
         if(bomb.GetBool("Bomb") == true)
         {
+            print("Fixa shake");
             shakePos = transform.localPosition;
             time += Time.time * frequency;
             shakePos.x = Mathf.Sin(time.x)* amplitude.x;
