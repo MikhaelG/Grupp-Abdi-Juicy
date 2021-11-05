@@ -32,7 +32,8 @@ public class OpAnim : MonoBehaviour
                 }
                 else if (gameObject.tag == "Volume")
                 {
-                    soundManager.SliderOp();
+                    //soundManager.SliderOp();
+                    print("Fixa slider grej");
                 }
                 else if(gameObject.tag == "Controls")
                 {
