@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,15 +13,22 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            //Die();
+            DeathAnimation(); //Jag gjorde en sak i animationen så att man kan se att skeppet exploderas. Det tog oss annars direkt till dötts scenen. -Saga
         }
 
     }
 
-    public void Die()
+    public void DeathAnimation()
+    {
+
+        death.SetBool("Shoot", false);
+        death.SetBool("Explo", true);
+    }
+    public void Die() //Kommer användas som en ping grejsimojs i animationen -Saga
     {
         Destroy(gameObject);
-        death.SetBool("Explotion", true);
-        print("Död");
+        SceneManager.LoadScene(2); //Ska skickas till döds scenen -Saga
+
     }
 }

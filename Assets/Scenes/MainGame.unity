@@ -731,6 +731,11 @@ PrefabInstance:
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 490240131}
+    - target: {fileID: 8084650458691663397, guid: e2fc52a62d436784cb4bc43bb74b8937,
+        type: 3}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 1125913448}
     - target: {fileID: 8084650458691663398, guid: e2fc52a62d436784cb4bc43bb74b8937,
         type: 3}
       propertyPath: m_RootOrder
@@ -788,6 +793,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8084650458691663400, guid: e2fc52a62d436784cb4bc43bb74b8937,
         type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084650458691663400, guid: e2fc52a62d436784cb4bc43bb74b8937,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084650458691663400, guid: e2fc52a62d436784cb4bc43bb74b8937,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084650458691663400, guid: e2fc52a62d436784cb4bc43bb74b8937,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084650458691663400, guid: e2fc52a62d436784cb4bc43bb74b8937,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -804,6 +829,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1445633170}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1064660793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064660792}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2dc400f5ee12c1b4da95b5f98fa538bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1082442366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -907,8 +951,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  player: {fileID: 1125913446}
-  death: {fileID: 0}
+  death: {fileID: 1125913448}
+--- !u!95 &1125913448
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125913446}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dd86297ef788dd42ae4096af85eeac0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1154593917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1232,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2960316492774634416, guid: f9d1039d22e55ed478a99d8c53b22b81,
+        type: 3}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 1125913448}
     - target: {fileID: 2960316492774634417, guid: f9d1039d22e55ed478a99d8c53b22b81,
         type: 3}
       propertyPath: m_Name

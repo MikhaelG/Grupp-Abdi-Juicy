@@ -16,10 +16,10 @@ public class Weapon : MonoBehaviour
         }
         else if (Input.GetButtonUp("Fire1"))
         {
-            //Så att inte animationen fortsätter för evigt och slutar när man tar upp knappen -Saga
-            //playerAnim.SetBool("Shoot", false);
             SoundManagerScript.PlaySound("shoot");   //spela skjuta ljud - Mikhael
-            print("Stop shooting");
+            playerAnim.SetBool("Shoot", false);
+            playerAnim.SetBool("Explo", false);
+            //Så att inte animationen fortsätter för evigt och slutar när man tar upp knappen -Saga
         }
 
     }
@@ -34,5 +34,6 @@ public class Weapon : MonoBehaviour
         //Instantiate(bulletPrefab, firePoint2.position, firePoint2.rotation);
         //Gör så att skjut animationen är på när den skjuter objektet -Saga
         playerAnim.SetBool("Shoot", true);
+        playerAnim.SetBool("Explo", false);
     }
 }
