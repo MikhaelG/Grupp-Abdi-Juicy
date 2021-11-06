@@ -10,27 +10,27 @@ public class ReplayButton : MonoBehaviour
     public GameObject replayButton;
     public Animator diedAnim;
     public Animator replayAnim;
-    public AnimationClip diedClip;
 
     void Update()
     {
-        //Fundera ut hur man gör det här
-        if(diedClip.length == 0.5f) //Om animation klippet är 0.5f då ska den sätta boolen till true
+        if(diedAnim.GetBool("Replay") == true)
         {
             replayButton.SetActive(true);
-            Function();
+
+            if (Input.GetButtonDown("Submit"))
+            {
+                print("Replay");
+                replayAnim.SetBool("Maybe", false);
+                replayAnim.SetBool("Selected", true);
+                SceneManager.LoadScene(0); //Laddas tillbaka till menyn
+            }
         }
-        Function();
-
+        
     }
-
     public void Function()
     {
-        if (Input.GetButtonDown("Submit"))
-        {
-            replayAnim.SetBool("Maybe", false);
-            replayAnim.SetBool("Selected", true);
-            SceneManager.LoadScene(0); //Laddas tillbaka till menyn
-        }
+        diedAnim.SetBool("Replay", true);
+        //replayButton.SetActive(true);
+
     }
 }

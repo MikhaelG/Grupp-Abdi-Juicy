@@ -217,6 +217,7 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0.1
+  opFun: {fileID: 0}
 --- !u!95 &104106168
 Animator:
   serializedVersion: 3
@@ -443,6 +444,7 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 1
+  opFun: {fileID: 0}
 --- !u!95 &302554666
 Animator:
   serializedVersion: 3
@@ -552,10 +554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opAnimator: {fileID: 360213184}
-  contrOp: {fileID: 0}
+  contrOp: {fileID: 104106168}
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 2
+  opFun: {fileID: 0}
 --- !u!95 &360213184
 Animator:
   serializedVersion: 3
@@ -669,6 +672,7 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0.2
+  opFun: {fileID: 0}
 --- !u!95 &361313702
 Animator:
   serializedVersion: 3
@@ -1662,6 +1666,7 @@ MonoBehaviour:
   indexHo: 0.1
   maxIndexHo: 0.2
   active: 0
+  hori: 0
   optionMenu: {fileID: 935251674}
 --- !u!1 &1646385102
 GameObject:
@@ -2150,6 +2155,7 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0
+  opFun: {fileID: 0}
 --- !u!95 &2019656566
 Animator:
   serializedVersion: 3

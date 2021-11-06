@@ -12,7 +12,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Maybe
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: Selected
+    m_ConditionEvent: Select
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1564244019414027181}
@@ -70,7 +70,7 @@ AnimatorStateMachine:
     m_Position: {x: 420, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1564244019414027181}
-    m_Position: {x: 610, y: 50, z: 0}
+    m_Position: {x: 640, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1202176832676059944}
     m_Position: {x: 290, y: 120, z: 0}
@@ -99,7 +99,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Selected
+  - m_Name: Select
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -130,7 +130,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Maybe
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: Selected
+    m_ConditionEvent: Select
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2532015520383839476}
@@ -212,7 +212,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Maybe
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: Selected
+    m_ConditionEvent: Select
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2532015520383839476}

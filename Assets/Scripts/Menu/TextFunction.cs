@@ -66,7 +66,6 @@ public class TextFunction : MonoBehaviour
 
     public void StopIndex()
     {
-       
         options = true;
         print(options);
         index = atStopIndex; //Hur stoppar jag indexen?

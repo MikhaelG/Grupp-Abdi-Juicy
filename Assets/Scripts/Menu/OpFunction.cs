@@ -13,6 +13,7 @@ public class OpFunction : MonoBehaviour
     public float indexHo; //gjorde den till float så att man kan urskilja vertikal index (opIndex) med horisontell index 
     public float maxIndexHo;
     public bool active = false;
+    public bool hori = false;
 
     public GameObject optionMenu;
 
@@ -25,7 +26,6 @@ public class OpFunction : MonoBehaviour
 
             if (Input.GetButtonDown("Vertical"))
             {
-                print("byt options");
                 if (vert > 0.95f)
                 {
                     opIndex--;
@@ -54,6 +54,8 @@ public class OpFunction : MonoBehaviour
                 //Om det är gametagen Controls. (Man vill kunna välja vilka typer av knappar när man är på inställningen controls)
                 if (gameObject.tag == "Controls")
                 {
+                    hori = true;
+                    print("hori:" + hori);
                     if (vert > 0.95f)
                     {
                         indexHo--;
@@ -75,7 +77,6 @@ public class OpFunction : MonoBehaviour
                             indexHo = maxIndexHo;
                         }
                     }
-
                     //Ett sätt att välja mellan de två olika keyboard typerna
 
                 }
@@ -86,8 +87,9 @@ public class OpFunction : MonoBehaviour
                     print("back");
                 }
 
-
             }
         }
+
+        
     }
 }
