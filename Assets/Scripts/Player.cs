@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 
     public void DeathAnimation()
     {
-
         death.SetBool("Shoot", false);
         death.SetBool("Explo", true);
     }
