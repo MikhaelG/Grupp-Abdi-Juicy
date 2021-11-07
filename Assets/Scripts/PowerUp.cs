@@ -35,6 +35,6 @@ public class PowerUp : MonoBehaviour
         playerAnim.SetBool("PowerUp", true);
         playerAnim.SetBool("Shoot", false);
         playerAnim.SetBool("Explo", false);
-
+        
     }
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public int health = 1;
     public Animator death;
+    public camerashake cameraSh;
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -22,12 +23,12 @@ public class Player : MonoBehaviour
     public void DeathAnimation()
     {
         death.SetBool("Shoot", false);
+        death.SetBool("PowerUp", false);
         death.SetBool("Explo", true);
     }
     public void Die() //Kommer användas som en ping grejsimojs i animationen -Saga
     {
         Destroy(gameObject);
         SceneManager.LoadScene(2); //Ska skickas till döds scenen -Saga
-
     }
 }
