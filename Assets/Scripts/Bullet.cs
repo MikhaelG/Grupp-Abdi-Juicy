@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Mikhaels kod
+//Mikhael
 public class Bullet : MonoBehaviour
 {
     public float speed = 40f; //hastighet och damage för bullet
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
-        Destroy(gameObject);
+        Destroy(gameObject);   //Tar sönder enemy efter att den träffade den
     }
 
 }

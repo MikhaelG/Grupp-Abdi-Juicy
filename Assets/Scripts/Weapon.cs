@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Mikhaels kod
+//Mikhael
 public class Weapon : MonoBehaviour
 {
     public Animator playerAnim; //Saga

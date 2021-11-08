@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Mikhael
 public class PowerUp : MonoBehaviour
 {
     private void OnTriggerEnter2D (Collider2D other)
@@ -14,13 +14,12 @@ public class PowerUp : MonoBehaviour
 
     void Pickup(Collider2D player)
     {
-        //Instantiate(pickupEffect, transform.position, transform.rotation); //Animation för pickup
 
         GameObject firepoint = new GameObject();
         firepoint.transform.parent = player.transform;
-        firepoint.transform.localPosition = new Vector3(0.6f,0,0);
-        firepoint.name = "Ny firepoint";
-        firepoint.transform.rotation = Quaternion.Euler (new Vector3(0, 0, 90));
+        firepoint.transform.localPosition = new Vector3(0.6f,0,0); //Stället en ny firepoint ska spawnas vid
+        firepoint.name = "Ny firepoint"; //namnet
+        firepoint.transform.rotation = Quaternion.Euler (new Vector3(0, 0, 90)); //Firepoint behöver roteras så att den skjuter uppåt
 
         GameObject firepoint2 = new GameObject();
         firepoint2.transform.parent = player.transform;

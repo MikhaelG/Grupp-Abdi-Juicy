@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Mikhael
 public class Character2DController : MonoBehaviour
 {
     public float MovementSpeed = 1;
@@ -13,8 +13,8 @@ public class Character2DController : MonoBehaviour
 
     private void Update()
     {
-        float movementX = Input.GetAxis("Horizontal");
-        float movementY = Input.GetAxis("Vertical");
-        transform.position += new Vector3(movementX, movementY, 0) * Time.deltaTime * MovementSpeed;
+        float movementX = Input.GetAxis("Horizontal"); //Horizontal axis
+        float movementY = Input.GetAxis("Vertical");   //Vertical axis
+        transform.position += new Vector3(movementX, movementY, 0) * Time.deltaTime * MovementSpeed; //hastigheten
     }
 }
