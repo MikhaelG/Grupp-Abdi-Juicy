@@ -7,8 +7,16 @@ public class OpAnim : MonoBehaviour
     //Skriv ner från MenuButton koden och gör animationer till knapparna-Saga
 
     public Animator opAnimator;
+    public Animator contrOp;
     public OpFunction opFunction;
+    public SoundManager soundManager;
     public float thisIndex; //Så att man kan välja mellan horisontell eller vertikal index (Titta OpFunction koden)
+
+    public OpFunction opFun;
+    private void Start()
+    {
+        opAnimator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (opFunction.opIndex == thisIndex) //Om indexen är just på den "Knappen" ska den göra det här
@@ -17,15 +25,32 @@ public class OpAnim : MonoBehaviour
 
             if (Input.GetButtonDown("Submit")) //Gör så att man kan trycka på kanppen
             {
-                opAnimator.SetBool("Maybe", false);
-                opAnimator.SetBool("Selected", false);
+                if(gameObject.tag == "Back") //Ska bara för Controls och Back 
+                {
+                    opAnimator.SetBool("Maybe", false);
+                    opAnimator.SetBool("Selected", true);
+                    
+                }
+                else if (gameObject.tag == "Volume")
+                {
+                    soundManager.SliderOp();
+                }
+                else if(gameObject.tag == "Controls")
+                {
+                    opAnimator.SetBool("Maybe", false);
+                    opAnimator.SetBool("Selected", true);
+                    contrOp.SetBool("Select", false);
+                    contrOp.SetBool("Maybe", true);
+
+                    print("Selected");
+                }else
+                {
+                    opAnimator.SetBool("Selected", false);
+                    opAnimator.SetBool("Maybe", true);
+                }
 
             }
-            else
-            {
-                opAnimator.SetBool("Selected", false);
-                opAnimator.SetBool("Maybe", true);
-            }
+            
         }else
         {
             opAnimator.SetBool("Maybe", false);

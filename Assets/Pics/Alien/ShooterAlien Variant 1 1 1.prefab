@@ -30,21 +30,6 @@ Transform:
   m_Father: {fileID: 2994430856770860755}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6981931707340212499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2994430856770860719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2202abb72f6553346a5616b3a6f09cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 318711267536456692}
-  bulletPrefab: {fileID: 9192770324076999336, guid: 1a19e9016d2a0334495d31e07ff59f60,
-    type: 3}
 --- !u!114 &-2891000873533951099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +45,21 @@ MonoBehaviour:
   health: 1
   damage: 1
   deathEffect: {fileID: 0}
+--- !u!114 &6981931707340212499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994430856770860719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2202abb72f6553346a5616b3a6f09cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 318711267536456692}
+  bulletPrefab: {fileID: 9192770324076999336, guid: 1a19e9016d2a0334495d31e07ff59f60,
+    type: 3}
 --- !u!1001 &1015947429179059510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 2852753502176533402, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2852753502176533476, guid: 85a6b5731412f7f4e84365909b2fe721,
         type: 3}

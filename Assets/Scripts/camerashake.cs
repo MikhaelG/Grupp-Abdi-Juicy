@@ -14,19 +14,39 @@ public class camerashake : MonoBehaviour
     new Vector3 shakePos;
 
     public Animator bomb;
+    public Animator player;
 
     float shakeTime;
     
     void Update()
     {
-        if(bomb.GetBool("Bomb") == true)
+        if (Input.GetKeyDown(KeyCode.B))
         {
-            shakePos = transform.localPosition;
-            time += Time.time * frequency;
-            shakePos.x = Mathf.Sin(time.x)* amplitude.x;
-
-            transform.localPosition = shakePos;
+            bomb.SetBool("Bomb", true);
+        }else if (Input.GetKeyUp(KeyCode.B))
+        {
+            bomb.SetBool("Bomb", false);
         }
 
+        
+        if(bomb.GetBool("Bomb") == true)
+        {
+            Shake();
+        }else if(player.GetBool("Shoot") == true)
+        {
+            //Shake();
+        }else if(player.GetBool("Explo") == true)
+        {
+            Shake();
+        }
+
+    }
+    public void Shake()
+    {
+        shakePos = transform.localPosition;
+        time += Time.time * frequency;
+        shakePos.x = Mathf.Sin(time.x) * amplitude.x;
+
+        transform.localPosition = shakePos;
     }
 }

@@ -12,75 +12,84 @@ public class OpFunction : MonoBehaviour
     //Horisontellt
     public float indexHo; //gjorde den till float så att man kan urskilja vertikal index (opIndex) med horisontell index 
     public float maxIndexHo;
+    public bool active = false;
+    public bool hori = false;
 
     public GameObject optionMenu;
 
-    public virtual void Options()
+    public void Update()
     {
-        float vert = Input.GetAxisRaw("Vertical");
-        float vertHo = Input.GetAxisRaw("Horizontal"); //Titta längre ner för kod
-
-        if (Input.GetButtonDown("Vertical"))
+        if (active)
         {
-            if (vert > 0.95f)
+            float vert = Input.GetAxisRaw("Vertical");
+            float vertHo = Input.GetAxisRaw("Horizontal"); //Titta längre ner för kod
+
+            if (Input.GetButtonDown("Vertical"))
             {
-                opIndex--;
-
-
-                if (opIndex > maxOpIndex)
-                {
-                    opIndex = 0;
-                }
-            }
-
-
-            if (vert < -0.95f)
-            {
-                opIndex++;
-
-                if (opIndex < 0)
-                {
-                    opIndex = maxOpIndex;
-                }
-            }
-
-        }
-        else if (Input.GetButtonDown("Submit")) //Om man tryckt ner den då kan man välja mellan att använda WASD eller arrows
-        {
-            //Om det är gametagen Controls. (Man vill kunna välja vilka typer av knappar när man är på inställningen controls)
-            if(gameObject.tag == "Controls")
-            {
-                print("Controls");
                 if (vert > 0.95f)
                 {
-                    indexHo--;
+                    opIndex--;
 
 
-                    if (indexHo > maxIndexHo)
+                    if (opIndex > maxOpIndex)
                     {
-                        indexHo = 0.1f; //För att urskilja de två
+                        opIndex = 0;
                     }
                 }
 
 
                 if (vert < -0.95f)
                 {
-                    indexHo++;
+                    opIndex++;
 
-                    if (indexHo < 0)
+                    if (opIndex < 0)
                     {
-                        indexHo = maxIndexHo;
+                        opIndex = maxOpIndex;
                     }
                 }
 
-                //Ett sätt att välja mellan de två olika keyboard typerna
-
-            }else if(gameObject.tag == "Back")
-            {
-                optionMenu.SetActive(false);
             }
+            else if (Input.GetButtonDown("Submit")) //Om man tryckt ner den då kan man välja mellan att använda WASD eller arrows
+            {
+                //Om det är gametagen Controls. (Man vill kunna välja vilka typer av knappar när man är på inställningen controls)
+                if (gameObject.tag == "Controls")
+                {
+                    hori = true;
+                    print("hori:" + hori);
+                    if (vert > 0.95f)
+                    {
+                        indexHo--;
 
-           
+
+                        if (indexHo > maxIndexHo)
+                        {
+                            indexHo = 0.1f; //För att urskilja de två
+                        }
+                    }
+
+
+                    if (vert < -0.95f)
+                    {
+                        indexHo++;
+
+                        if (indexHo < 0)
+                        {
+                            indexHo = maxIndexHo;
+                        }
+                    }
+                    //Ett sätt att välja mellan de två olika keyboard typerna
+
+                }
+                else if (gameObject.tag == "Back")
+                {
+                    active = false;
+                    optionMenu.SetActive(false);
+                    print("back");
+                }
+
+            }
         }
+
+        
     }
 }

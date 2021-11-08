@@ -4,6 +4,7 @@ using UnityEngine;
 //Mikhael
 public class PowerUp : MonoBehaviour
 {
+    public Animator playerAnim;
     private void OnTriggerEnter2D (Collider2D other)
     {
         if (other.CompareTag("Player")) //kollar efter så att player tag tar upp den och ingen annan
@@ -28,5 +29,11 @@ public class PowerUp : MonoBehaviour
         firepoint2.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
 
         Destroy(gameObject);
+
+        //Lägger till en effekt/animationgrej till när den plockas upp-Saga
+        playerAnim.SetBool("PowerUp", true);
+        playerAnim.SetBool("Shoot", false);
+        playerAnim.SetBool("Explo", false);
+        
     }
 }

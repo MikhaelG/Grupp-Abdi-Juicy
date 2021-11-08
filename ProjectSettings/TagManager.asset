@@ -8,6 +8,8 @@ TagManager:
   - Options
   - Quit
   - Controls
+  - Back
+  - enemy
   layers:
   - Default
   - TransparentFX
