@@ -24,13 +24,13 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < clock; i++)
         {
-            Instantiate(alien, spawner.position, spawner.rotation);
+            Instantiate(alien, spawner.position, spawner.rotation); // Spawnar alien på spawners position - Andreas
             yield return new WaitForSeconds(1);
             
         }
     }
 
-    IEnumerator Move()
+    IEnumerator Move() //Ändrar position på spawnern - Andreas
     {
 
         for (int i = 0; i < clock; i++)

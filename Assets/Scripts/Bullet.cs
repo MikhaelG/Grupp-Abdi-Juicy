@@ -4,24 +4,24 @@ using UnityEngine;
 //Mikhael
 public class Bullet : MonoBehaviour
 {
-    public float speed = 40f; //hastighet och damage för bullet
+    public float speed = 40f; //hastighet och damage för bullet - Mikhael
     public int damage = 1;
     public Rigidbody2D rb;
     
     void Start()
     {
         rb.velocity = transform.right * speed;
-        Destroy(gameObject, 2);                  //Ta sönder bullet om 2 sekunder
+        Destroy(gameObject, 2);                  //Ta sönder bullet om 2 sekunder - Mikhael
     }
 
     private void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        Enemy enemy = hitInfo.GetComponent<Enemy>();   //bullet kollar efter om den träffade enemy; gör damage
+        Enemy enemy = hitInfo.GetComponent<Enemy>();   //bullet kollar efter om den träffade enemy; gör damage - Mikhael
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
         }
-        Destroy(gameObject);   //Tar sönder enemy efter att den träffade den
+        Destroy(gameObject);   //Tar sönder enemy efter att den träffade den - Mikhael
     }
 
 }

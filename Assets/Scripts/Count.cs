@@ -14,7 +14,7 @@ public class Count : MonoBehaviour
 
     IEnumerator Timer()
     {
-        for (int i = 0; i < clock; i++)
+        for (int i = 0; i < clock; i++)  //Ökar en varibal som används som hastighet för att öka svårhetsgraden -Andreas
         {
             Count.speed++;
             yield return new WaitForSeconds(5);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AlienBullet : MonoBehaviour
 {
-    public float speed = 40f;
+    public float speed = 40f;  // En ripoff på Mikhaels bullet kod med lite ändringar - Andreas
     public int damage = 1;
     public Rigidbody2D rb;
 

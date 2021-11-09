@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class AlienWeapon : MonoBehaviour
+public class AlienWeapon : MonoBehaviour //Ochskå en ripoff på Mikhaels kod -Andreas.
 {
     //public Animator playerAnim; //Saga
     public Transform firePoint;

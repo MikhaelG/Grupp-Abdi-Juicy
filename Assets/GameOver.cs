@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //När man collidar med en enemy så tar man skada - Andreas
     {
         if(collision.gameObject.tag == "enemy")
         {
