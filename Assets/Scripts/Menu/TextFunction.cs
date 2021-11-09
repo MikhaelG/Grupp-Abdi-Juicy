@@ -21,6 +21,7 @@ public class TextFunction : MonoBehaviour
     public AudioSource menuAudio;
     public AudioClip menuAuClip;
 
+    public OpFunction opFun;
     void Start()
     {
         buttonAudio.GetComponent<AudioSource>();
@@ -67,8 +68,9 @@ public class TextFunction : MonoBehaviour
     public void StopIndex()
     {
         options = true;
+        opFun.active = true; //Koden blir aktiv
         print(options);
-        index = atStopIndex; //Hur stoppar jag indexen?
+        index = atStopIndex; 
     }
 
 }

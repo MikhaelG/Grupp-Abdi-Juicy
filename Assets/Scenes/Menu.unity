@@ -217,7 +217,6 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0.1
-  opFun: {fileID: 0}
 --- !u!95 &104106168
 Animator:
   serializedVersion: 3
@@ -444,7 +443,6 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 1
-  opFun: {fileID: 0}
 --- !u!95 &302554666
 Animator:
   serializedVersion: 3
@@ -558,7 +556,6 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 2
-  opFun: {fileID: 0}
 --- !u!95 &360213184
 Animator:
   serializedVersion: 3
@@ -672,7 +669,6 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0.2
-  opFun: {fileID: 0}
 --- !u!95 &361313702
 Animator:
   serializedVersion: 3
@@ -1648,6 +1644,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: c54a1ef28a81d9b4a81899d95a2f640a, type: 3}
   menuAudio: {fileID: 609165418}
   menuAuClip: {fileID: 8300000, guid: 52d81edbd6499be43bc590e5b25e7b7a, type: 3}
+  opFun: {fileID: 1559522183}
 --- !u!114 &1559522183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,7 +2249,6 @@ MonoBehaviour:
   opFunction: {fileID: 1559522183}
   soundManager: {fileID: 0}
   thisIndex: 0
-  opFun: {fileID: 0}
 --- !u!95 &2019656566
 Animator:
   serializedVersion: 3

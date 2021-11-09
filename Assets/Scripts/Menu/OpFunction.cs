@@ -19,6 +19,7 @@ public class OpFunction : MonoBehaviour
 
     public void Update()
     {
+       
         if (active)
         {
             float vert = Input.GetAxisRaw("Vertical");
@@ -49,13 +50,15 @@ public class OpFunction : MonoBehaviour
                 }
 
             }
-            else if (Input.GetButtonDown("Submit")) //Om man tryckt ner den då kan man välja mellan att använda WASD eller arrows
+            
+            if (Input.GetButtonDown("Submit")) //Om man tryckt ner den då kan man välja mellan att använda WASD eller arrows
             {
+                
                 //Om det är gametagen Controls. (Man vill kunna välja vilka typer av knappar när man är på inställningen controls)
                 if (gameObject.tag == "Controls")
                 {
                     hori = true;
-                    print("hori:" + hori);
+                    print("yes");
                     if (vert > 0.95f)
                     {
                         indexHo--;
@@ -82,14 +85,26 @@ public class OpFunction : MonoBehaviour
                 }
                 else if (gameObject.tag == "Back")
                 {
-                    active = false;
-                    optionMenu.SetActive(false);
-                    print("back");
+                    Back();
                 }
 
             }
         }
 
         
+    }
+
+    public void Back()
+    {
+        /*if (gameObject.tag == "Back")
+        {
+            
+        }*/
+        //Den här delen fungerar inte
+        print("back");
+        active = false;
+        textFunction.options = false;
+        optionMenu.SetActive(false);
+
     }
 }

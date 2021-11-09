@@ -12,7 +12,6 @@ public class OpAnim : MonoBehaviour
     public SoundManager soundManager;
     public float thisIndex; //Så att man kan välja mellan horisontell eller vertikal index (Titta OpFunction koden)
 
-    public OpFunction opFun;
     private void Start()
     {
         opAnimator = GetComponent<Animator>();
@@ -29,6 +28,7 @@ public class OpAnim : MonoBehaviour
                 {
                     opAnimator.SetBool("Maybe", false);
                     opAnimator.SetBool("Selected", true);
+                    opFunction.Back();
                     
                 }
                 else if (gameObject.tag == "Volume")
@@ -42,7 +42,6 @@ public class OpAnim : MonoBehaviour
                     contrOp.SetBool("Select", false);
                     contrOp.SetBool("Maybe", true);
 
-                    print("Selected");
                 }else
                 {
                     opAnimator.SetBool("Selected", false);

@@ -22,14 +22,16 @@ public class MenuButtons : MonoBehaviour
             animator.SetBool("Maybe", true);
             if(Input.GetButtonDown("Submit")) //Gör så att man kan trycka på kanppen
             {
-                animator.SetBool("Selected", true);
-                animator.SetBool("Maybe", false);
+                /*animator.SetBool("Selected", true);
+                animator.SetBool("Maybe", false);*/
 
                 if (gameObject.tag == "Start")
                 {
                     SceneManager.LoadScene(1);
+                    Count.speed = 5;
 
-                }else if (gameObject.tag == "Options")//Om objektet man selectar heter options ska den sätta på optionsmenyn
+                }
+                else if (gameObject.tag == "Options")//Om objektet man selectar heter options ska den sätta på optionsmenyn
                 {
                     optionsMenu.SetActive(true);
                     textFunction.StopIndex();
@@ -37,7 +39,7 @@ public class MenuButtons : MonoBehaviour
 
                 }else if (gameObject.tag == "Quit")
                 {
-                    Quit();
+                    Application.Quit();//Skriv kod för att quita - Andreas
 
                 }
 
@@ -53,10 +55,4 @@ public class MenuButtons : MonoBehaviour
             animator.SetBool("Maybe", false);
         }
     }
-
-    public virtual void Quit()
-    {
-        //Skriv kod för att stänga av 
-    }
-
 }
